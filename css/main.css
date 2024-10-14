@@ -1,0 +1,96 @@
+/*note: for project two, do transitions between slides*/
+
+@import url('https://fonts.googleapis.com/css2?family=Calligraffitti&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Eagle+Lake&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Qwitcher+Grypen:wght@400;700&family=Tangerine:wght@400;700&display=swap');
+
+body {
+    text-align: center;
+    background: url(../images/background.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    margin: 4em auto;
+}
+
+
+h1 {
+    font-family: "Eagle Lake", serif;
+    font-weight: 400;
+    font-style: normal;
+    color: rgb(255, 255, 255);
+    text-shadow: 0 0 3px #ffffff, 0 0 5px #000000;
+}
+
+h2 {
+    font-family: "Calligraffitti", cursive;
+    font-weight: 400;
+    font-style: normal;
+    color: rgb(255, 255, 255);
+    text-shadow: 0 0 3px #000000, 0 0 5px #8a9900;
+}
+  
+.carousel {
+    position: relative;
+    max-width: 600px;
+    margin: auto;
+    overflow: hidden;
+    margin-top: 2.5em;
+}
+
+.carousel-images {
+    transition: transform 0.5s ease;
+}
+
+.carousel-item {
+    min-width: 100%;
+    position: relative;
+    margin-bottom: 2rem;
+}
+
+.carousel-item.active {
+    display: block;
+}
+
+.caption {
+    position: absolute;
+    bottom: 10px;
+    left: 44%;
+    font-family: "Tangerine", cursive;
+    font-weight: 700;
+    font-style: normal;
+    font-size: 1.6rem;
+    color: white;
+    background-color: rgba(0, 0, 0, 0.7);
+    padding: 5px 10px;
+    border-radius: 5px;
+}
+
+.back, .next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: transparent;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    border-radius: 18px;
+}
+
+.indicators {
+    text-align: center;
+    margin-top: 10px;
+}
+
+.indicator {
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    margin: 5px;
+    background-color: rgba(102, 102, 102, 0.452);
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.indicator.active {
+    background-color: rgb(255, 231, 126);
+}
