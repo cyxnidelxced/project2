@@ -3,32 +3,33 @@
 @import url('https://fonts.googleapis.com/css2?family=Playwrite+FR+Moderne:wght@100..400&display=swap');
 
 body {
-    text-align: center;
-    background: url(../images/hydrocopy.png) no-repeat center center fixed;
-    -webkit-background-size: cover;
+    text-align: center; /*items aligned center*/
+    background: url(../images/hydrocopy.png) no-repeat center center fixed; /*background image*/
+    -webkit-background-size: cover; /*background image full when changing browser or window size*/
     -moz-background-size: cover;
     -o-background-size: cover;
     background-size: cover;
-    margin: 4em auto;
+    margin: 4em auto; /*margin area*/
 }
 
 
 h1 {
-    font-family: "Eagle Lake", serif;
+    font-family: "Eagle Lake", serif; /*chosen font*/
     font-weight: 400;
     font-style: normal;
-    color: rgb(255, 255, 255);
-    text-shadow: 0 0 3px #000000, 0 0 5px #000000;
+    color: rgb(255, 255, 255); /*font color*/
+    text-shadow: 0 0 3px #000000, 0 0 5px #000000; /*color of text shadow*/
 }
 
 h2 {
-    font-family: "Calligraffitti", cursive;
+    font-family: "Calligraffitti", cursive; /*chosen font*/
     font-weight: 400;
     font-style: normal;
-    color: rgb(255, 255, 255);
-    text-shadow: 0 0 3px #000000, 0 0 5px #ffffff;
+    color: rgb(255, 255, 255); /*font solor*/
+    text-shadow: 0 0 3px #000000, 0 0 5px #ffffff; /*color of text shadow*/
 }
-  
+
+/*div class carousel*/
 .carousel {
     position: relative;
     max-width: 600px;
@@ -37,25 +38,30 @@ h2 {
     margin-top: 2.5em;
 }
 
+/*div class carousel-images*/
 .carousel-images {
     transition: transform 0.5s ease;
 }
 
+/*div class carousel-item*/
 .carousel-item {
     min-width: 100%;
     position: relative;
     margin-bottom: 2rem;
 }
 
+/*keyframe animation for fade*/
 @keyframes fade {
     from {opacity: 0.2}
     to {opacity: 1}
 }
 
+/*div class carousel-item active*/
 .carousel-item.active {
     display: block;
 }
 
+/*div class caption for images*/
 .caption {
     position: absolute;
     bottom: 10px;
@@ -71,6 +77,7 @@ h2 {
     border-radius: 5px;
 }
 
+/*back and next arrows*/
 .back, .next {
     position: absolute;
     top: 50%;
@@ -83,11 +90,13 @@ h2 {
     border-radius: 18px;
 }
 
+/*div class indicators*/
 .indicators {
     text-align: center;
     margin-top: 10px;
 }
 
+/*div indicator from js*/
 .indicator {
     display: inline-block;
     width: 10px;
@@ -98,6 +107,7 @@ h2 {
     cursor: pointer;
 }
 
+/*when indicator is active*/
 .indicator.active {
     background-color: rgb(255, 228, 107);
 }
