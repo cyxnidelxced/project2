@@ -3,11 +3,20 @@ const slides = document.querySelectorAll('.carousel-item');
 const indicatorsContainer = document.querySelector('.indicators');
 const totalSlides = slides.length;
 let autoplayInterval;
+const caption = document.querySelectorAll('.caption');
 
 // carousel and indicators
 function showSlide(index) {
     slides.forEach((slide, i) => {
-        slide.style.display = (i === index) ? 'block' : 'none';
+        slide.style.opacity = (i === index) ? 1 : 0;
+        slide.style.position = "absolute";
+    });
+
+    
+    caption.forEach((cap, i) => {
+        cap.style.opacity = (i === index) ? 1 : 0;
+        cap.style.position="absolute";
+        cap.style.visibility="visible";
     });
 
     const indicators = document.querySelectorAll('.indicator');
@@ -42,6 +51,7 @@ function createIndicators() {
         if (i === 0) indicator.classList.add('active');
         indicator.addEventListener('click', () => goToSlide(i));
         indicatorsContainer.appendChild(indicator);
+        indicator.style.position="relative";
     }
 }
 
@@ -61,8 +71,7 @@ document.querySelector('.carousel').addEventListener('mouseleave', startAutoplay
 // Initialize carousel
 let images = document.querySelectorAll('.carousel-item');
 images.forEach((img) => {
-    img.style.display="none";
-    img.style.animation="fade 1.5s ease-in-out 2 alternate";
+    img.style.opacity=0;
 });
 let left = document.querySelectorAll('.back');
 left.forEach((btn) => {
