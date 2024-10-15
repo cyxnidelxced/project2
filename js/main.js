@@ -54,7 +54,7 @@ function stopAutoplay() {
     clearInterval(autoplayInterval);
 }
 
-// Event listeners to pause on hover
+// Event listeners to pause autoplay on hover
 document.querySelector('.carousel').addEventListener('mouseenter', stopAutoplay);
 document.querySelector('.carousel').addEventListener('mouseleave', startAutoplay);
 
