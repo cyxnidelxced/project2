@@ -4,6 +4,7 @@ const indicatorsContainer = document.querySelector('.indicators');
 const totalSlides = slides.length;
 let autoplayInterval;
 
+// carousel and indicators
 function showSlide(index) {
     slides.forEach((slide, i) => {
         slide.style.display = (i === index) ? 'block' : 'none';
@@ -15,21 +16,25 @@ function showSlide(index) {
     });
 }
 
+// next slide showing
 function nextSlide() {
     currentSlide = (currentSlide + 1) % totalSlides;
     showSlide(currentSlide);
 }
 
+// previous slide showing
 function prevSlide() {
     currentSlide = (currentSlide - 1 + totalSlides) % totalSlides;
     showSlide(currentSlide);
 }
 
+// current slide
 function goToSlide(index) {
     currentSlide = index;
     showSlide(currentSlide);
 }
 
+// Indicator feature
 function createIndicators() {
     for (let i = 0; i < totalSlides; i++) {
         const indicator = document.createElement('div');
